@@ -3,7 +3,7 @@
 	if((!isset($_POST)) || (!array_key_exists("studentid", $_POST)))
 	{
 		echo "<script>
-		alert('请登录！');
+		alert('璇风櫥褰曪紒');
 		window.location = 'index.php';
 		</script>";
 	}
@@ -13,8 +13,15 @@
 		if(0 == $ret)
 		{
 			echo "<form action='home.php' method='POST'>
-			注册成功<input type='hidden' name='studentid' value='" . $_POST["studentid"] . "'></input><br>
-			单击此处返回<input type='submit' value='返回'</input>
+			娉ㄥ唽鎴愬姛<input type='hidden' name='studentid' value='" . $_POST["studentid"] . "'></input><br>
+			鍗曞嚮姝ゅ杩斿洖<input type='submit' value='杩斿洖'</input>
+			</form>";
+		}
+		else
+		{
+			echo "<form action='index.php' method='POST'>
+			娉ㄥ唽澶辫触, 閿欒鍙傛暟 $ret <br>
+			鍗曞嚮姝ゅ杩斿洖<input type='submit' value='杩斿洖'</input>
 			</form>";
 		}
 	}
